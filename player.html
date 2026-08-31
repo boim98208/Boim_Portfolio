@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="player.css">
+    <script src="player.js" defer></script>
+</head>
+
+<body class="player-page">
+    <section class="player-embed" aria-label="Audio demos">
+        <div class="audio-player">
+            <h2 class="audio-demo-heading">Audio Demos</h2>
+
+            <script type="application/json" class="audio-track-data">
+                [
+                    {
+                        "title": "Guardian of a Single Dock",
+                        "artist": "Boi Instruments",
+                        "src": "audio/Guardian of a Single Dock.mp3",
+                        "chapters": [
+                            { "time": 5, "tag": "Intro" },
+                            { "time": 24, "tag": "Riff" },
+                            { "time": 42, "tag": "Build" }
+                        ]
+                    },
+                    {
+                        "title": "He Who Still Guards the Same Dock",
+                        "artist": "Boi Instruments",
+                        "src": "audio/He who still guards the same dock.mp3",
+                        "chapters": [
+                            { "time": 8, "tag": "Theme" },
+                            { "time": 36, "tag": "Chorus" }
+                        ]
+                    },
+                    {
+                        "title": "Honor et Irrisio WIP",
+                        "artist": "Boi Instruments",
+                        "src": "audio/Honor et Irrisio WIP (1).mp3",
+                        "chapters": [
+                            { "time": 15, "tag": "Lead" },
+                            { "time": 55, "tag": "Outro" }
+                        ]
+                    }
+                ]
+            </script>
+
+            <div class="play-controls">
+                <div class="player-now-playing">
+                    <div class="player-art" aria-hidden="true">
+                        <button class="play-toggle player-main-button" type="button" aria-label="Play selected track">
+                            <span class="player-play-icon"></span>
+                            <span class="player-pause-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="player-info">
+                        <div class="play-artist">Select a track</div>
+                        <div class="play-name">Audio Demo</div>
+
+                        <div class="play-buttons">
+                            <button class="play-volume-toggle player-icon-button volume" type="button" aria-label="Mute audio"></button>
+                            <input class="play-volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+                        </div>
+                    </div>
+
+                    <div class="play-time-display">
+                        <span class="play-time-current">0:00</span>
+                        <span>/</span>
+                        <span class="play-time-total">0:00</span>
+                    </div>
+                </div>
+
+                <div class="play-time-bar">
+                    <input class="play-time-range" type="range" value="0" min="0" disabled aria-label="Track progress">
+                    <div class="playbar-chapters" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="play-list" aria-label="Choose an audio track"></div>
+        </div>
+    </section>
+</body>
+
+</html>

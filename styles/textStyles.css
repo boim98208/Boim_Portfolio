@@ -1,0 +1,383 @@
+@font-face {
+    font-family: "interRegular";
+    src: url("../fonts/static/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-family: "interRegular";
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 100;
+}
+
+a{
+    font-family: "interRegular";
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 100;
+
+}
+
+div.headerContainer{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: start;
+}
+
+
+.header-text{
+    font-weight: 400;
+    font-size:60px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.header-sub-text{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 80;
+    font-size: 20px;
+    text-align:center;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+}
+
+.empty-space{
+    margin: 500px;
+}
+
+.header-sub-sub-text{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-weight: 30;
+    font-size: 20px;
+    text-align:center;
+    color: rgba(255, 255, 255,0);
+    text-align: center;
+    transition: all 0.5s ease-in;
+}
+
+.header-sub-sub-text {
+  color: rgba(255, 255, 255, 0);
+  transition: color 0.5s ease-in;
+}
+
+/*  when hovering any of the header text, it fades in the third line*/
+.header-text:hover ~ .header-sub-sub-text,
+.header-sub-text:hover ~ .header-sub-sub-text,
+.header-sub-sub-text:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+strong.instrument-header{
+    margin-left: 50px;
+    font-size:175px;
+    box-sizing: border-box;
+}
+
+strong.instrument-sub-header{
+    margin-top: 0px;
+    margin-left: 50px;
+    font-size: 50px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+
+.instrument-image{
+    margin: 80px auto 0;
+    display: flex;
+    width:60%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.instrument-header-container{
+    display:flex;
+    margin-left: 100px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+div.headerContainerLeft{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 0px;
+}
+
+div.headerContainerRight{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+div.section-one{
+    justify-content:flex-start;
+    display:flex;   
+    flex-direction: column;
+    margin-left: 0px;
+}
+
+div.section-one-connector{
+    justify-content:space-evenly;
+    display:flex;   
+    flex-direction: row;
+    margin-left: 59px;
+    gap: 50px;
+}
+
+div.download-panel{
+    justify-content:flex-start;
+    align-items: flex-start;
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.download-panel hr {
+  align-self: stretch;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Solid divider */
+.divider-solid {
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 0 0;
+}
+
+/* Dotted divider */
+.divider-dotted {
+  border: none;
+  border-top: 2px dotted #fff;
+  margin: 0 0;
+}
+
+.github-icon {
+  position: relative;
+    top: 2px;
+  width: 19px;
+  height: 19px;
+  color: #fff; /* fill: currentColor picks this up */
+  flex-shrink: 0;
+}
+
+
+p.section-one-p{
+    width: 823px;
+    font-weight: 400;
+    font-size: 25px;
+    margin-left: 29px;
+}
+
+.section-one-strong{
+    font-size: 39px;
+    font-weight: 600;
+}
+
+.linkButton{
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 80;
+    font-variation-settings: "wght" 80;
+    font-size:30px;
+}
+
+.linkButton:hover{
+    transition: all 0.5s ease;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.donate-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 312px;             
+    height: 51px;
+
+    background-color: #000;
+    color: #fff;
+
+    font-size: 25px;          
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.8); /* visible white outline */
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.donate-button:hover {
+    transform: scale(1.02);
+    color:rgba(255, 255, 255, 0.8);
+}
+
+.donate-subtext{
+    font-weight: 500;
+    font-size: 15px;
+    height:36px;
+    width: 280px;
+    margin: 0px;
+    text-align: center;
+}
+
+.download-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 312px;             
+    height: 51px;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    font-size: 25px;          
+    font-weight: 400;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(0, 0, 0, 0.8); /* visible white outline */
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.download-button:hover{
+    transform: scale(1.02);
+    color:rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.download-panel-additional-text{
+    font-weight: 400;
+    margin: 0px;
+    font-size: 17px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+}
+
+.download-panel-additional-text:hover{
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+}
+
+div.about-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    margin: 10px auto 0;
+    gap: 10px;
+}
+
+.about-section-catchphrase{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.contact-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    margin: 10px auto 0;
+    gap: 10px;
+}
+
+.contact-image{
+    
+}
+
+
+
+body{
+    background-color: rgb(0, 0, 0);
+    
+}
+
+strong{
+    color: rgba(255, 255, 255);
+    font-family: "interRegular";
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+.instrument-text{
+    margin-left: 20px;
+}
+
+.dap-image{
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about-section-connector{
+    justify-content:space-evenly;
+    display:flex;   
+    flex-direction: row;
+    margin-left: 59px;
+    gap: 10px;
+}
+
+.about-section-text{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: left;
+    width: 1000px;
+}
+
+.about-section-text-highlight{
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: left;
+    width: 1000px;
+}
+
+.about-image{
+    width: 550px;
+    margin: 20px;
+}
+
+.contact-image{
+    width: 300px;
+    margin: 20px;
+}
+
+.big-gap{
+    margin-top: 100px;
+}

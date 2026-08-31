@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+
+<head>
+  <link rel="stylesheet" href="styles/textStyles.css">
+  <link rel="stylesheet" href="player.css">
+  <script src="player.js" defer></script>
+  <title>
+    B🤝i Instruments
+  </title>
+  <link rel="icon" href="./images/Favicon.png" type="image/png" sizes="32x32">
+</head>
+
+<body class="demo-page">
+  <header class="page-header">
+    <div class="headerContainerLeft">
+      <div style="display:flex; justify-content:center; vertical-align:center;">
+        <p class="header-text">Ibrahim Rasyid</p>
+      </div>
+      <p class="header-sub-text">Boi Instruments</p>
+    </div>
+  </header>
+
+  <br>
+    <br>
+
+      <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+        <p class="header-text">DSP Automation</p>
+
+  <main class="demo-layout">
+
+    <section class="text-block" aria-label="Project description after screenshot">
+      <p>
+        Virtual instruments are known for mind numbing tasks in development. This is especially the case in
+        recording
+        and processing audio samples. Going through hundreds of thousands of 20+ second recordings add up and can take months to
+        complete. This project is a collection of tools and scripts that I have developed to streamline the process of
+        recording, processing, and exporting audio samples for virtual instruments.
+        The goal is to reduce the time spent on repetitive tasks and make such methods accesisble to everyone. The
+        following showcases a method called
+        "repetition sampling" but put into automated workflow, reducing manpower put to recording and processing audio
+        samples.
+      </p>
+    </section>
+
+    <section class="text-block" aria-label="Project description after screenshot">
+      <p>
+        Please listen to the following
+      </p>
+    </section>
+
+
+    <div class="audio-player">
+      <script type="application/json" class="audio-track-data">
+          [
+            {
+              "title": "Master Recording",
+              "src": "audio/showcase1/Master.wav",
+              "chapters": [
+                { "time": 0, "tag": "Note 1" },
+                { "time": 2, "tag": "Note 2" },
+                { "time": 4, "tag": "Note 3" },
+                { "time": 6, "tag": "Note 4" },
+                { "time": 8, "tag": "Note 5" },
+                { "time": 10, "tag": "Note 6" },
+                { "time": 12, "tag": "Note 7" },
+                { "time": 14, "tag": "Note 8" },
+                { "time": 16, "tag": "Note 9" }
+              ]
+            }
+          ]
+        </script>
+
+      <div class="play-controls">
+        <div class="player-now-playing">
+          <div class="player-art" aria-hidden="true">
+            <button class="play-toggle player-main-button" type="button" aria-label="Play selected track">
+              <span class="player-play-icon"></span>
+              <span class="player-pause-icon"></span>
+            </button>
+          </div>
+
+          <div class="player-info">
+            <div class="play-artist">Select a track</div>
+            <div class="play-name">Audio Demo</div>
+
+            <div class="play-buttons">
+              <button class="play-volume-toggle player-icon-button volume" type="button"
+                aria-label="Mute audio"></button>
+              <input class="play-volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+            </div>
+          </div>
+
+          <div class="play-time-display">
+            <span class="play-time-current">0:00</span>
+            <span>/</span>
+            <span class="play-time-total">0:00</span>
+          </div>
+        </div>
+
+        <div class="play-time-bar">
+          <input class="play-time-range" type="range" value="0" min="0" disabled aria-label="Track progress">
+          <div class="playbar-chapters" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="play-list" aria-label="Choose an audio track"></div>
+    </div>
+
+
+    <section class="text-block" aria-label="Project description after screenshot">
+      <p>
+        Using signal analysis, I can see the amplitude envelope, instantaneous phase, and frequency content of each
+        the note.
+        I then take each note that was cut off early and the last note that fully
+        plays out, and sweep through windows of samples to find the best windows to crossfade together. The script considers overall amplitude
+        and tries to fit the overall result to the original amplitude envelope, ensuring a realistic note that rings out.
+      </p>
+
+      <br>
+      <p>
+        The signal analysis also does minor pitch corrections to secure note consistency
+      </p>
+    </section>
+
+    <section class="player-embed" aria-label="Audio demos from showcase1">
+      <div class="audio-player">
+        <h2 class="audio-demo-heading">Each Note and Its Spliced Ends</h2>
+
+        <script type="application/json" class="audio-track-data">
+          [
+            { "title": "Note 1 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR01.wav" },
+            { "title": "Note 1 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR01_export.wav" },
+            { "title": "Note 2 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR02.wav" },
+            { "title": "Note 2 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR02_export.wav" },
+            { "title": "Note 3 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR03.wav" },
+            { "title": "Note 3 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR03_export.wav" },
+            { "title": "Note 4 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR04.wav" },
+            { "title": "Note 4 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR04_export.wav" },
+            { "title": "Note 5 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR05.wav" },
+            { "title": "Note 5 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR05_export.wav" },
+            { "title": "Note 6 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR06.wav" },
+            { "title": "Note 6 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR06_export.wav" },
+            { "title": "Note 7 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR07.wav" },
+            { "title": "Note 7 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR07_export.wav" },
+            { "title": "Note 8 cutoff", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR08.wav" },
+            { "title": "Note 8 + spliced end", "src": "audio/showcase1/bonki_sustain_string8_dynamic3_E1_RR08_export.wav" }          ]
+        </script>
+
+        <div class="play-controls">
+          <div class="player-now-playing">
+            <div class="player-art" aria-hidden="true">
+              <button class="play-toggle player-main-button" type="button" aria-label="Play selected track">
+                <span class="player-play-icon"></span>
+                <span class="player-pause-icon"></span>
+              </button>
+            </div>
+
+            <div class="player-info">
+              <div class="play-artist">Select a track</div>
+              <div class="play-name">Audio Demo</div>
+
+              <div class="play-buttons">
+                <button class="play-volume-toggle player-icon-button volume" type="button"
+                  aria-label="Mute audio"></button>
+                <input class="play-volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+              </div>
+            </div>
+
+            <div class="play-time-display">
+              <span class="play-time-current">0:00</span>
+              <span>/</span>
+              <span class="play-time-total">0:00</span>
+            </div>
+          </div>
+
+          <div class="play-time-bar">
+            <input class="play-time-range" type="range" value="0" min="0" disabled aria-label="Track progress">
+            <div class="playbar-chapters" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="play-list" aria-label="Choose an audio track"></div>
+      </div>
+    </section>
+
+
+    <section class="media-block image-block" aria-label="Project screenshot">
+      <img src="images/showing python screenshot.png" alt="Python project screenshot">
+    </section>
+
+  
+
+    <section class="text-block" aria-label="Project description after screenshot">
+      <p>
+        The results are seamlessly natural. What could've been 3 minutes of recording is cut down to nearly 30 seconds; a nearly 85% reduction in time spent recording.
+        Scaled to inevitables 100+ hours of recording, it saves developers months of time and effort. The process is also very consistent, as the same algorithm is applied to every note.
+        
+      </p>
+    </section>
+
+    <section class="text-block" aria-label="Project description between audio groups">
+      <p>
+        The following examples extend the earlier material into a broader set of performance conditions, emphasizing
+        variation in articulation, tone production, and expressive control. These recordings are presented as a
+        continuation of the same research and development process. All have months of time saved due to the above approach.
+      </p>
+    </section>
+
+    <section class="player-embed" aria-label="Audio demos from showing full examples">
+      <div class="audio-player">
+        <h2 class="audio-demo-heading">Method in Context</h2>
+
+        <script type="application/json" class="audio-track-data">
+          [
+            { "title": "Fast Metal", "src": "audio/showing full examples/Repetition Sampling Test.mp3" },
+            { "title": "Slow Loose Metal", "src": "audio/showing full examples/showing 8 string loose mutes.mp3" },
+            { "title": "Slow Soft Acoustic", "src": "audio/showing full examples/showing acoustic guitar.mp3" },
+            { "title": "Standard Pace Rock", "src": "audio/showing full examples/Testing modelled vibrato with rake picking and dive bomb.mp3" }
+          ]
+        </script>
+
+        <div class="play-controls">
+          <div class="player-now-playing">
+            <div class="player-art" aria-hidden="true">
+              <button class="play-toggle player-main-button" type="button" aria-label="Play selected track">
+                <span class="player-play-icon"></span>
+                <span class="player-pause-icon"></span>
+              </button>
+            </div>
+
+            <div class="player-info">
+              <div class="play-artist">Select a track</div>
+              <div class="play-name">Audio Demo</div>
+
+              <div class="play-buttons">
+                <button class="play-volume-toggle player-icon-button volume" type="button"
+                  aria-label="Mute audio"></button>
+                <input class="play-volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+              </div>
+            </div>
+
+            <div class="play-time-display">
+              <span class="play-time-current">0:00</span>
+              <span>/</span>
+              <span class="play-time-total">0:00</span>
+            </div>
+          </div>
+
+          <div class="play-time-bar">
+            <input class="play-time-range" type="range" value="0" min="0" disabled aria-label="Track progress">
+            <div class="playbar-chapters" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="play-list" aria-label="Choose an audio track"></div>
+      </div>
+    </section>
+
+        <section class="text-block" aria-label="Project description between audio groups">
+      <p>
+        The following video is a showcase of the automation methods in combination with a generalized virtual guitar engine that's in development
+      </p>
+    </section>
+
+    <section class="media-block video-block" aria-label="Project video demo">
+      <video controls preload="metadata" playsinline>
+        <source src="video/2026-05-12 20-26-33 again.mp4" type="video/mp4">
+      </video>
+    </section>
+  </main>
+
+  <style>
+    body.demo-page {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: "interRegular", Arial, sans-serif;
+    }
+
+    .page-header {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0 0;
+    }
+
+    .headerContainerLeft {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-left: 0;
+    }
+
+    .header-text {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1;
+      color: #fff;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .header-sub-text {
+      margin: 0;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 80;
+    }
+
+    .demo-layout {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 60px;
+      display: grid;
+      gap: 36px;
+    }
+
+    .media-block {
+      width: 100%;
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .media-block video,
+    .media-block img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .text-block {
+      width: 100%;
+      padding: 8px 0;
+    }
+
+    .text-block p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: "interRegular", Arial, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      line-height: 1.8;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      max-width: 1000px;
+    }
+
+    .player-embed {
+      width: 100%;
+      margin: 0;
+    }
+
+    .audio-demo-heading {
+      margin: 0 0 18px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+  </style>
+</body>
+
+</html>

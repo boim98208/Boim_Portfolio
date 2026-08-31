@@ -1,0 +1,74 @@
+
+        .github-source-code-button {
+            background-color: rgb(90, 90, 90);
+            color: rgb(255, 255, 255);
+            border: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 30px;
+            margin-left: 30px;
+
+            transition:
+                width 0.1s ease-in,
+                opacity 0.1s ease-in,
+                box-shadow 0.1s ease-in,
+                padding-left 0.1s ease-in,
+                padding-right 0.1s ease-in,
+                padding-top 0.1s ease-in,
+                padding-bottom 0.1s ease-in;
+
+        }
+
+        .github-source-code-button:hover {
+            width: 230px;
+        }
+
+        .github-source-code-button:active {
+            opacity: 0.8;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-button {
+            background-color: rgb(80, 101, 134);
+            color: white;
+            border: none;
+            width: 210px;
+            font-size: 16px;
+            border-radius: 4px;
+            border-color: rgb(80, 101, 134);
+            border-style: solid;
+            border-width: 2px;
+            cursor: pointer;
+            margin-left: 30px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            transition:
+                background-color 0.1s ease-in,
+                color 0.1s ease-in,
+                width 0.1s ease-in,
+                border-color 0.1s ease-in,
+                border-width 0.1s ease-in,
+                box-shadow 0.1s ease-in;
+
+        }
+
+        .contact-button:hover {
+            background-color: rgb(109, 135, 175);
+            border-color: rgb(109, 135, 175);
+            color: rgb(160, 177, 203);
+            border-width: 5px;
+            box-shadow: 3px 6px 10px rgba(109, 135, 175, 0.3);
+
+        }
